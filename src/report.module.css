@@ -30,12 +30,22 @@
   color: rgb(226, 226, 226);
 }
 
+.mainHead > h3 {
+  font-size: 30px;
+}
+
 .mainHead {
   height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.horseLogo {
+  height: 73px;
+  width: 64px;
+  background-image: url(./images/hest.png);
 }
 
 .subHead {
@@ -111,16 +121,16 @@
 }
 
 .question {
-  padding: 5px;
+  padding: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 60%;
 }
 
 .answerBox {
-  margin-left: 15px;
+  width: 250px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -133,11 +143,22 @@
 }
 
 @media screen and (max-width: 900px) {
-  .question {
-    flex-direction: column;
-  }
-
   .answer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainHead > h3 {
+    font-size: 15px;
+  }
+  .subHead > h3 {
+    font-size: 15px;
+  }
+  .answerBox {
+    width: 50%;
+  }
+  .rating {
+    font-size: 15px;
   }
 }

@@ -9,6 +9,7 @@ function FetchData(){
     const [surveyName, setSurveyName] = useState(null)
     const [endDate, setEndDate] = useState([])
     const [surveyLoading, setSurveyLoading] = useState(true)
+    const [error, setError] =useState(null)
 
     //Answers part
     const [questions, setQuestions] = useState([])
@@ -21,13 +22,19 @@ function FetchData(){
 
     useEffect(async () => {
         //Survey Details part
-        const response = await fetch(baseurl + guid);
-        const data = await response.json();
-        const item = data;
-        
-        setSurveyName(item.survey.name)
-        setEndDate(item.survey.endDate.split('-')[1].split('0')[1])
-        setSurveyLoading(false)
+        fetch(baseurl + guid)
+        .then(res => res.json())
+        .then(
+            (result) => {
+                setSurveyLoading(false)
+                setSurveyName(result.survey.name);
+                setEndDate(result.survey.endDate.split('-')[1].split('0')[1])
+            },
+            (error) =>{
+                setSurveyLoading(false)
+                setError(error)
+            }
+        )
 
         //Answers part
         const qResponse = await fetch(baseurl + guid + '/responses/' + guid);
@@ -47,7 +54,9 @@ function FetchData(){
         setSLoading(false);
     }, [])
 
-    if(surveyLoading){
+    if(error){
+        return <div>Error: {error.message}</div>
+    } else if(surveyLoading){
         return (
             <div>
                 <h3>Survey Details Loading...</h3>

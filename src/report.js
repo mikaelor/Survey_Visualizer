@@ -56,7 +56,7 @@ const TableConstructor = (props) => {
                                 </p> 
                                 {item.questionText}
                             </li>
-                            <div lassName={styles.answerBox}>
+                            <div className={styles.answerBox}>
                                 <li className={styles.answer}> 
                                     <p style={{fontWeight: 'bold', marginRight: '5px'}}>
                                         Answer:
@@ -68,6 +68,7 @@ const TableConstructor = (props) => {
                     ))}
                 </div>
             </div>
+            <div className={styles.horseLogo} style={{margin: '10px'}}><p></p></div>
         </div>
     )
 }
