@@ -1,0 +1,143 @@
+.table {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4c5157;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tableData {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.surveyHead {
+  width: 70%;
+  height: 60%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+  color: rgb(226, 226, 226);
+}
+
+.mainHead {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subHead {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.points {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon1 {
+  height: 15px;
+  width: 90px;
+  background-image: url(./images/star1.png);
+}
+.icon2 {
+  height: 15px;
+  width: 90px;
+  background-image: url(./images/star2.png);
+}
+.icon3 {
+  height: 15px;
+  width: 90px;
+  background-image: url(./images/star3.png);
+}
+.icon4 {
+  height: 15px;
+  width: 90px;
+  background-image: url(./images/star4.png);
+}
+.icon5 {
+  height: 15px;
+  width: 90px;
+  background-image: url(./images/star5.png);
+}
+.tableData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.QnA {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.question {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.answerBox {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .question {
+    flex-direction: column;
+  }
+
+  .answer {
+    flex-direction: column;
+  }
+}
